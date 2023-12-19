@@ -99,7 +99,7 @@ public class Game {
 
         // Setter for the game rating (from 0 to 5) with validation check
         public void setRating(int rating) {
-            if (rating > 0 && rating <= 5) {
+            if (rating >= 0 && rating <= 5) {
                 this.rating = rating;
             } else {
                 System.out.println("The rating must be from 0 to 5");

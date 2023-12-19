@@ -1,6 +1,7 @@
 package Tasks.T2;
 
-// (жанр игры, например ACTION, SPORT, RACE, STRATEGY, RPG, MMORPG, LOGIC, HORROR, ADVENTURE, etc.)
+// Enum representing the genre of a game.
+// Examples of genres include ACTION, SPORT, RACE, STRATEGY, RPG, MMORPG, LOGIC, HORROR, ADVENTURE, SIMULATION, etc.
 public enum Genre {
     ACTION,
     SPORT,
