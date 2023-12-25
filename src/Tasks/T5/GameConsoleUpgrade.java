@@ -168,15 +168,6 @@ public class GameConsoleUpgrade implements Powered {
     }
 
     /**
-     * Sets the power state of the gaming console.
-     *
-     * @param on {@code true} to power on the gaming console, {@code false} to power off.
-     */
-//    public void setOn(boolean on) {
-//        isOn = on;
-//    }
-
-    /**
      * Loads the specified game on the gaming console.
      *
      * @param game The game to load.
@@ -194,21 +185,21 @@ public class GameConsoleUpgrade implements Powered {
      * @throws GameConsoleException If the gaming console is inactive for more than 5 cycles.
      */
     private void checkStatus() throws GameConsoleException {
-        //Если оба джойстика выключены – выводить сообщение «Подключите джойстик» и увеличивать счетчик на 1.
+        // If both joysticks are off - display the message "Connect the joystick" and increment the counter by 1.
         if (!firstGamepad.isOn() && !secondGamepad.isOn()) {
-            System.out.println("Подключите джойстик");
+            System.out.println("Connect the joystick");
             waitingCounter++;
         }
-        //Если хотя-бы один джойстик активен – сбрасывать в 0.
+        // If at least one joystick is active - reset the counter to 0.
         if (firstGamepad.isOn() || secondGamepad.isOn()) {
             waitingCounter = 0;
         }
-        //Если счетчик превысил 5 циклов ожидания – «Выключить» приставку
-        // и бросить исключение с текстом «Приставка завершает работу из-за отсутствия активности» (Класс-исключение создать свой.)
+        // If the counter exceeds 5 waiting cycles - "Turn off" the console
+        // and throw an exception with the text "Console is shutting down due to inactivity" (Create your own exception class.)
         if (waitingCounter >= 5) {
             powerOff();
-            System.out.println("Выключение... \n5\n4\n3\n2\n1\n");
-            throw new GameConsoleException("Приставка завершает работу из-за отсутствия активности");
+            System.out.println("Shutting down... \n5\n4\n3\n2\n1\n");
+            throw new GameConsoleException("Console is shutting down due to inactivity");
         }
     }
 

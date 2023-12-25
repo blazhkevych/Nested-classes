@@ -1,6 +1,6 @@
 package Tasks.T5;
 
-// • Создать интерфейс Powered с методами powerOn и PowerOff
+// Powered interface with powerOn and PowerOff methods
 public interface Powered {
     void powerOn();
 

@@ -146,26 +146,12 @@ public class Main {
             gameConsoleUpgrade.getFirstGamepad().powerOn();
             gameConsoleUpgrade.getSecondGamepad().powerOn();
 
-            //System.out.println("\nTrying to load the game from disc...");
-
-//            // Creating a physical game (GameDisk)
-//            System.out.println("\nCreating a physical game (GameDisk)...");
-//            Game.GameDisk physicalGame = Game.getDisk("The Witcher 3", Genre.RPG, "Epic RPG game");
-
-            // Щагружаем игру с диска в консоль
-            //System.out.println("\nLoading the game from disc to the console...");
-            //gameConsoleUpgrade.loadGame(physicalGame.getData()); // много сообщений о загрузке игры ?!?!? (и-за последующего вызова метода playGame()
-
-
             // Играем
             gameConsoleUpgrade.playGame();
-
             // Играем
             gameConsoleUpgrade.playGame();
-
             // Играем
             gameConsoleUpgrade.playGame();
-
             // Играем
             gameConsoleUpgrade.playGame();
             // Играем
